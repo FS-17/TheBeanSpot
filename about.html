@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - The Bean Spot</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* About Hero Section */
+      .about-hero-section {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: var(--primary-color);
+      }
+
+      .about-hero-parallax {
+        position: absolute;
+        inset: 0;
+        background-image: url("https://images.unsplash.com/photo-1495474472287-45d54c6427f6?q=80&w=2070&auto=format&fit=crop");
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.1);
+        opacity: 0.7;
+        animation: heroParallax 20s infinite alternate ease-in-out;
+      }
+
+      .about-hero-gradient {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to bottom, #4e342ed9 0%, #4e342ef2 100%);
+        backdrop-filter: blur(5px);
+      }
+
+      .about-hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        transform: translateY(-2rem);
+      }
+
+      /* Our Story Section */
+      .our-story-section {
+        padding: 8rem 0;
+        background-color: var(--secondary-color);
+      }
+
+      /* Our Values Section */
+      .value-card {
+        padding: 2rem;
+        background: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .value-card:hover {
+        transform: translateY(-10px);
+      }
+
+      /* Coffee Journey Section */
+      .journey-step {
+        text-align: center;
+        flex: 1;
+        padding: 0 1rem;
+      }
+
+      .journey-step img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+      }
+
+      /* Add custom icon color */
+      .icon-brown {
+        color: #8b4513;
+      }
+
+      .wave-bottom {
+        position: absolute;
+        bottom: -5px;
+        left: 0px;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .wave-bottom svg {
+        position: relative;
+        display: block;
+        /* width: 1000rm; */
+        /* height: 100px; */
+      }
+
+      .wave-path {
+        fill: var(
+          --secondary-color
+        ); /* Matches the "Our Story" section background */
+      }
+    </style>
+  </head>
+  <body class="bg-cream font-poppins text-brown-dark antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
+          >The Bean Spot</a
+        >
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="menu.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Menu</a
+          >
+
+          <a
+            href="about.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative active"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Contact & Location</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="menu.html" class="block px-6 py-3 hover:bg-gray-100">Menu</a>
+        <a href="about.html" class="block px-6 py-3 hover:bg-gray-100 active"
+          >About Us</a
+        >
+        <a href="contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >Contact & Location</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="about-hero-section">
+      <div class="about-hero-parallax"></div>
+      <div class="about-hero-gradient"></div>
+      <div class="about-hero-content">
+        <span class="hero-subtitle fade-in">Our Story</span>
+        <h1 class="hero-title slide-up-fade-in">
+          Crafting Exceptional Coffee Experiences
+        </h1>
+        <p class="hero-description slide-up-fade-in">
+          Since 2010, The Bean Spot has been dedicated to bringing you the
+          finest coffee, sourced ethically and crafted with passion.
+        </p>
+      </div>
+      <div class="wave-bottom">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+          <path
+            class="wave-path"
+            d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,197.3C672,192,768,160,864,138.7C960,117,1056,107,1152,117.3C1248,128,1344,160,1392,176L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story-section">
+      <div class="container mx-auto px-6 py-6">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-8 md:mb-0">
+            <!-- video -->
+            <video
+              src="./assets/cafe.mp4"
+              class="w-full rounded-lg shadow-lg"
+              autoplay
+              loop
+              muted
+            ></video>
+          </div>
+          <div class="md:w-1/2 md:pl-12">
+            <h2 class="text-4xl font-playfair font-bold mb-6 fade-in">
+              Our Journey
+            </h2>
+            <p class="text-lg mb-4 slide-up-fade-in">
+              The Bean Spot was founded by coffee enthusiasts who dreamed of
+              sharing their love for exceptional coffee. From a humble café,
+              we’ve grown into a cherished community space, celebrated for our
+              warm atmosphere and unwavering commitment to quality.
+            </p>
+            <p class="text-lg slide-up-fade-in">
+              We source the finest beans globally, perfecting our craft to
+              deliver unique flavors in every cup.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Values Section -->
+    <section class="our-values-section bg-neutral-light py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-playfair font-bold text-center mb-12 fade-in">
+          What We Stand For
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="value-card text-center fade-in">
+            <i class="fas fa-leaf text-4xl icon-brown mb-4"></i>
+            <h3 class="text-2xl font-playfair mb-2">Sustainability</h3>
+            <p>We prioritize ethical sourcing and eco-friendly practices.</p>
+          </div>
+          <div
+            class="value-card text-center fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <i class="fas fa-users text-4xl icon-brown mb-4"></i>
+            <h3 class="text-2xl font-playfair mb-2">Community</h3>
+            <p>We foster connection and belonging through every brew.</p>
+          </div>
+          <div
+            class="value-card text-center fade-in"
+            style="animation-delay: 0.4s"
+          >
+            <i class="fas fa-award text-4xl icon-brown mb-4"></i>
+            <h3 class="text-2xl font-playfair mb-2">Quality</h3>
+            <p>Every cup reflects our dedication to excellence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Coffee Journey Section -->
+    <section class="coffee-journey-section bg-cream py-16">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-playfair font-bold text-center mb-12 fade-in">
+          From Bean to Cup
+        </h2>
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="journey-step mb-8 md:mb-0 fade-in">
+            <img
+              src="https://images.unsplash.com/photo-1520052203542-d3095f1b6cf0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Sourcing"
+              class="rounded-lg shadow-lg mb-4 mx-auto"
+              style="width: 300px; height: 200px; object-fit: cover"
+            />
+            <h3 class="text-2xl font-playfair mb-2">Sourcing</h3>
+            <p>We partner with farmers worldwide for the best beans.</p>
+          </div>
+          <div
+            class="journey-step mb-8 md:mb-0 fade-in"
+            style="animation-delay: 0.2s"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1607681034540-2c46cc71896d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Roasting"
+              class="rounded-lg shadow-lg mb-4 mx-auto"
+              style="width: 300px; height: 200px; object-fit: cover"
+            />
+            <h3 class="text-2xl font-playfair mb-2">Roasting</h3>
+            <p>Our roasters craft each batch with precision.</p>
+          </div>
+          <div class="journey-step fade-in" style="animation-delay: 0.4s">
+            <img
+              src="https://images.unsplash.com/photo-1737132439579-20c1c6d65812?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Brewing"
+              class="rounded-lg shadow-lg mb-4 mx-auto"
+              style="width: 300px; height: 200px; object-fit: cover"
+            />
+            <h3 class="text-2xl font-playfair mb-2">Brewing</h3>
+            <p>Baristas perfect every cup with skill and care.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-16 text-center">
+      <h2 class="text-4xl font-playfair font-bold mb-6 fade-in">
+        Join Our Coffee Journey
+      </h2>
+      <p class="text-lg mb-8 slide-up-fade-in">
+        Visit The Bean Spot and taste the passion in every sip.
+      </p>
+      <a href="contact.html" class="button-gold fade-in">Find Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
+      <p>
+        © 2025 The Bean Spot. Made by
+        <a
+          href="https://fs-17.github.io"
+          class="text-brown-medium hover:text-brown-dark transition duration-300"
+          style="
+            font-weight: 700;
+            color: #d2691e;
+            font-family: 'Playfair Display', serif;
+          "
+          >Faisal Alsaweed</a
+        >
+      </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Intersection Observer for Animations
+      const sectionsToAnimate = document.querySelectorAll(
+        ".about-hero-section, .our-story-section, .our-values-section, .coffee-journey-section, .cta-section"
+      );
+      sectionsToAnimate.forEach((section) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const headings = section.querySelectorAll("h1, h2, h3");
+                headings.forEach((heading) => heading.classList.add("animate"));
+                const paragraphsAndButtons =
+                  section.querySelectorAll("p, .button-gold");
+                paragraphsAndButtons.forEach((element, index) => {
+                  setTimeout(
+                    () => element.classList.add("animate"),
+                    index * 150
+                  );
+                });
+                const fadeIns = section.querySelectorAll(".fade-in");
+                fadeIns.forEach((element, index) => {
+                  setTimeout(
+                    () => element.classList.add("animate"),
+                    index * 100
+                  );
+                });
+                observer.unobserve(section);
+              }
+            });
+          },
+          { threshold: 0.15 }
+        );
+        observer.observe(section);
+      });
+
+      // Navbar Hide on Scroll
+      let lastScrollTop = 0;
+      const navbar = document.querySelector("nav");
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop && scrollTop > navbar.offsetHeight) {
+          navbar.style.transform = "translateY(-100%)";
+        } else {
+          navbar.style.transform = "translateY(0)";
+        }
+        lastScrollTop = scrollTop;
+      });
+    </script>
+  </body>
+</html>

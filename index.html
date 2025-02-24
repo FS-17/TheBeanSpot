@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bean Spot - Homepage</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Remove inline styles and add link to external CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-cream font-poppins text-brown-dark antialiased">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="/"
+          class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
+          >The Bean Spot</a
+        >
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="./menu.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Menu</a
+          >
+
+          <a
+            href="./about.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >About Us</a
+          >
+          <a
+            href="./contact.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Contact & Location</a
+          >
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="./menu.html" class="block px-6 py-3 hover:bg-gray-100">Menu</a>
+
+        <a href="./about.html" class="block px-6 py-3 hover:bg-gray-100"
+          >About Us</a
+        >
+        <a href="./contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >Contact & Location</a
+        >
+      </div>
+    </nav>
+
+    <!-- Intro Hero Section -->
+    <section class="intro-hero-section">
+      <div class="intro-hero-parallax"></div>
+      <div class="intro-hero-gradient"></div>
+      <div class="intro-hero-content">
+        <span class="hero-subtitle">Welcome to</span>
+        <h1 class="hero-title">The Bean Spot</h1>
+        <p class="hero-description">
+          A Coffee Connoisseur's Journey: Where Passion and Craftsmanship Meet
+          in Every Cup
+        </p>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Scroll to Explore</span>
+        <svg
+          class="scroll-arrow"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M12 5L12 19M12 19L19 12M12 19L5 12"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Image Text Section 1 - Bean Sourcing -->
+    <section class="image-text-section">
+      <div
+        class="image-text-image-container fade-in"
+        style="animation-delay: 0.2s"
+      >
+        <img
+          src="./assets/arabica.jpg"
+          alt="Sourcing Coffee Beans"
+          class="image-text-image"
+        />
+      </div>
+      <div class="image-text-content">
+        <h2 class="fade-in" style="animation-delay: 0.4s">
+          Meticulously Sourced Beans
+        </h2>
+        <p class="slide-up-fade-in" style="animation-delay: 0.6s">
+          Our journey begins with a commitment to sourcing only the highest
+          quality Arabica beans. We travel the globe, partnering with farmers
+          who share our dedication to sustainable and ethical practices. From
+          the lush highlands to fertile valleys, we select beans that represent
+          the pinnacle of coffee excellence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Add new Video Scroll Section -->
+    <section class="sticky-video-section">
+      <div class="sticky-video-container">
+        <video
+          class="sticky-video"
+          playsinline
+          muted
+          src="./assets/beans.mp4"
+        ></video>
+        <div class="video-text-overlay" id="videoText">
+          <h2>From Bean to Perfection</h2>
+          <p>
+            Watch as we transform carefully selected coffee beans into the
+            perfect cup through our meticulous roasting process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Text Section 2 - Roasting Artistry (Reverse Layout) -->
+    <section class="image-text-section roasting-section">
+      <div class="image-text-image-container" style="animation-delay: 0.1s">
+        <img
+          src="./assets/flowting.png"
+          alt="Coffee Roasting"
+          style="background: transparent"
+        />
+      </div>
+      <div class="image-text-content">
+        <h2 class="fade-in" style="animation-delay: 0.4s">
+          The Art of Roasting
+        </h2>
+        <p class="slide-up-fade-in" style="animation-delay: 0.6s">
+          Roasting is where science and art intertwine. Our master roasters
+          meticulously control every stage of the process, coaxing out the
+          unique flavor profiles within each bean. We roast in small batches to
+          ensure precision and consistency, unlocking the full potential of
+          every coffee we offer.
+        </p>
+      </div>
+    </section>
+
+    <!-- Cafe Ambiance Section -->
+    <section class="cafe-ambiance-section">
+      <div class="ambiance-container">
+        <h2 class="section-title fade-in">Experience the Ambiance</h2>
+        <p class="section-subtitle fade-in">
+          Step into a world where every detail is crafted for your comfort
+        </p>
+
+        <div class="ambiance-gallery">
+          <div class="gallery-item large fade-in" style="animation-delay: 0.2s">
+            <img
+              src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=900&auto=format&fit=crop&q=60"
+              alt="Main Cafe Space"
+            />
+            <div class="gallery-overlay">
+              <h3>Main Cafe Space</h3>
+              <p>Where comfort meets sophistication</p>
+            </div>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-item fade-in" style="animation-delay: 0.4s">
+              <img
+                src="https://images.unsplash.com/photo-1559496417-e7f25cb247f3?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGNvZmZlZXxlbnwwfHwwfHx8Mg%3D%3D"
+                alt="Cozy Corner"
+              />
+              <div class="gallery-overlay">
+                <h3>Cozy Corner</h3>
+                <p>Perfect for intimate conversations</p>
+              </div>
+            </div>
+            <div class="gallery-item fade-in" style="animation-delay: 0.6s">
+              <img
+                src="https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                alt="Barista Station"
+              />
+              <div class="gallery-overlay">
+                <h3>Barista Station</h3>
+                <p>Watch our artisans at work</p>
+              </div>
+            </div>
+            <div class="gallery-item fade-in" style="animation-delay: 0.8s">
+              <img
+                src="https://images.pexels.com/photos/17305194/pexels-photo-17305194/free-photo-of-coffee-on-table.jpeg?auto=compress&cs=tinysrgb&w=600"
+                alt="Outdoor Seating"
+              />
+              <div class="gallery-overlay">
+                <h3>Outdoor Seating</h3>
+                <p>Enjoy nature with your coffee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Barista Artistry Section -->
+    <section class="barista-artistry-section">
+      <div class="barista-container">
+        <h2 class="section-title fade-in">Barista Artistry</h2>
+        <p class="section-subtitle fade-in">
+          Crafting perfection, one cup at a time
+        </p>
+
+        <div class="barista-showcase">
+          <div class="barista-main fade-in" style="animation-delay: 0.2s">
+            <img
+              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?w=900&auto=format&fit=crop&q=60"
+              alt="Master Barista"
+            />
+            <div class="main-overlay">
+              <h3>Our Master Baristas</h3>
+              <p>Passionate craftsmen dedicated to the perfect brew</p>
+            </div>
+          </div>
+
+          <div class="barista-details">
+            <div class="detail-card fade-in" style="animation-delay: 0.4s">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  />
+                </svg>
+              </div>
+              <h4>Expert Training</h4>
+              <p>Continuous education and skill development for our baristas</p>
+            </div>
+
+            <div class="detail-card fade-in" style="animation-delay: 0.6s">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+                  />
+                </svg>
+              </div>
+              <h4>Precision & Care</h4>
+              <p>Every detail matters in creating your perfect cup</p>
+            </div>
+
+            <div class="detail-card fade-in" style="animation-delay: 0.8s">
+              <div class="icon-wrapper">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  class="icon"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  />
+                </svg>
+              </div>
+              <h4>Passion & Creativity</h4>
+              <p>Artistic expression in every latte art design</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="intro-hero-fade-section"></div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <h2 class="font-playfair cta-section-title fade-in">
+        Ready to Begin Your Coffee Journey?
+      </h2>
+      <p class="fade-in" style="animation-delay: 0.2s">
+        Visit The Bean Spot and discover a world of exceptional coffee. Explore
+        our menu, find our locations, and learn more about our story.
+      </p>
+      <a
+        href="./menu.html"
+        class="button-gold fade-in"
+        style="animation-delay: 0.4s"
+        >Discover Our Menu</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
+      <p>
+        © 2025 The Bean Spot. Made by
+        <a
+          href="https://fs-17.github.io"
+          class="text-brown-medium hover:text-brown-dark transition duration-300"
+          style="
+            font-weight: 700;
+            color: #d2691e;
+            font-family: 'Playfair Display', serif;
+          "
+          >Faisal Alsaweed</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Mobile Menu Toggle (JS) - Same as before
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+
+      // Intersection Observer for Animations - Modified for new sections
+      const sectionsToAnimate = document.querySelectorAll(
+        ".intro-hero-section, .image-text-section, .cafe-ambiance-section, .cta-section"
+      );
+
+      sectionsToAnimate.forEach((section) => {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const headings = section.querySelectorAll(
+                  "h1, h2, .cta-section-title"
+                ); // Include all headings
+                headings.forEach((heading) => {
+                  heading.classList.add("animate");
+                });
+                const paragraphsAndButtons = section.querySelectorAll(
+                  ".slide-up-fade-in, .button-gold"
+                ); // Include buttons
+                paragraphsAndButtons.forEach((element, index) => {
+                  setTimeout(() => {
+                    element.classList.add("animate");
+                  }, index * 150);
+                });
+                const fadeIns = section.querySelectorAll(".fade-in"); // For elements with just fade-in
+                fadeIns.forEach((element, index) => {
+                  setTimeout(() => {
+                    element.classList.add("animate");
+                  }, index * 100); // Slightly faster fade-in for images/smaller elements
+                });
+                observer.unobserve(section);
+              }
+            });
+          },
+          {
+            threshold: 0.15,
+          }
+        );
+        observer.observe(section);
+      });
+
+      // Add Video Scroll Animation
+      const videoSection = document.querySelector(".sticky-video-section");
+      const video = document.querySelector(".sticky-video");
+      const textOverlay = document.getElementById("videoText");
+
+      if (videoSection && video) {
+        let playbackConst = 5;
+
+        window.addEventListener("scroll", () => {
+          const rect = videoSection.getBoundingClientRect();
+          if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
+            const scrollPercentage =
+              Math.abs(rect.top) / (rect.height - window.innerHeight);
+            const frameNumber = Math.min(
+              video.duration * playbackConst,
+              scrollPercentage * video.duration * playbackConst
+            );
+
+            video.currentTime = frameNumber / playbackConst;
+
+            // Show text when video is in view
+            if (scrollPercentage > 0.2 && scrollPercentage < 0.8) {
+              textOverlay.classList.add("visible");
+            } else {
+              textOverlay.classList.remove("visible");
+            }
+          }
+        });
+      }
+
+      // Add navbar hide on scroll functionality
+      let lastScrollTop = 0;
+      const navbar = document.querySelector("nav");
+      const navbarHeight = navbar.offsetHeight;
+
+      window.addEventListener("scroll", () => {
+        const scrollTop =
+          window.pageYOffset || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
+          // Scrolling down
+          navbar.style.transform = "translateY(-100%)";
+        } else {
+          // Scrolling up
+          navbar.style.transform = "translateY(0)";
+        }
+
+        lastScrollTop = scrollTop;
+      });
+    </script>
+  </body>
+</html>

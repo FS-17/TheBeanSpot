@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - The Bean Spot</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .contact-hero-section {
+        position: relative;
+        height: 60vh;
+        min-height: 500px;
+        background-color: var(--primary-color);
+        overflow: hidden;
+      }
+
+      .contact-hero-bg {
+        position: absolute;
+        inset: 0;
+        background: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop")
+          center/cover;
+        opacity: 0.3;
+        transform: scale(1.1);
+      }
+
+      .contact-hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        text-align: center;
+        color: white;
+      }
+
+      .contact-form-section {
+        margin-top: -100px;
+        padding-bottom: 6rem;
+        position: relative;
+        z-index: 3;
+      }
+
+      .contact-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+      }
+
+      .contact-card {
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .form-side {
+        padding: 3rem;
+      }
+
+      .info-side {
+        background: linear-gradient(135deg, var(--primary-color), #2c1810);
+        padding: 3rem;
+        color: white;
+      }
+
+      .contact-input {
+        width: 100%;
+        padding: 1rem;
+        border: 2px solid #eee;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-input:focus {
+        border-color: var(--accent-color);
+        box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.1);
+        outline: none;
+      }
+
+      .contact-info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+      }
+
+      .info-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+      }
+
+      .cafe-hours {
+        margin-top: 3rem;
+      }
+
+      .hours-grid {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 0.5rem 2rem;
+        margin-top: 1rem;
+      }
+
+      .map-section {
+        padding: 6rem 0;
+        background: linear-gradient(
+          to bottom,
+          var(--secondary-color),
+          var(--neutral-light)
+        );
+      }
+
+      .map-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .map-container {
+        position: relative;
+        height: 450px !important;
+        filter: grayscale(0.3);
+        transition: filter 0.3s ease;
+      }
+
+      .map-container:hover {
+        filter: grayscale(0);
+      }
+
+      .map-header {
+        background: linear-gradient(135deg, var(--primary-color), #2c1810);
+      }
+
+      .social-links {
+        display: flex;
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+
+      .social-link {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background: var(--accent-color);
+        transform: translateY(-3px);
+      }
+
+      .submit-btn {
+        background: var(--accent-color);
+        color: white;
+        padding: 1rem 2rem;
+        border-radius: 10px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .submit-btn:hover {
+        background: #b3510b;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(210, 105, 30, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .contact-card {
+          flex-direction: column;
+        }
+        .form-side,
+        .info-side {
+          width: 100%;
+        }
+        .contact-hero-section {
+          height: 50vh;
+        }
+      }
+
+      /* Custom checkbox style */
+      .checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .custom-checkbox {
+        width: 20px;
+        height: 20px;
+        border: 2px solid #eee;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+        position: relative;
+      }
+
+      .custom-checkbox.checked {
+        background: var(--accent-color);
+        border-color: var(--accent-color);
+      }
+
+      .custom-checkbox.checked::after {
+        content: "✓";
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body class="bg-cream font-poppins text-brown-dark antialiased">
+    <!-- Navbar (Same as other pages) -->
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
+          >The Bean Spot</a
+        >
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="menu.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Menu</a
+          >
+          <a
+            href="about.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative active"
+            >Contact & Location</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="menu.html" class="block px-6 py-3 hover:bg-gray-100">Menu</a>
+        <a href="about.html" class="block px-6 py-3 hover:bg-gray-100"
+          >About Us</a
+        >
+        <a href="contact.html" class="block px-6 py-3 hover:bg-gray-100 active"
+          >Contact & Location</a
+        >
+      </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero-section flex items-center justify-center">
+      <div class="contact-hero-bg"></div>
+      <div class="contact-hero-content">
+        <span class="text-accent-color text-lg font-light mb-4 block fade-in"
+          >Get in Touch</span
+        >
+        <h1 class="text-5xl font-playfair font-bold mb-6 slide-up-fade-in">
+          Let's Connect Over Coffee
+        </h1>
+        <p class="text-lg opacity-90 max-w-2xl mx-auto slide-up-fade-in">
+          Whether you have questions about our coffee, want to book an event, or
+          just want to say hello, we'd love to hear from you.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+      <div class="contact-container">
+        <div class="contact-card flex">
+          <!-- Form Side -->
+          <div class="form-side w-full lg:w-3/5">
+            <h2 class="text-3xl font-playfair font-bold mb-6">
+              Send Us a Message
+            </h2>
+            <form
+              action="https://formspree.io/f/meoqgndl"
+              method="POST"
+              id="contactForm"
+              class=""
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2">
+                <input
+                  type="text"
+                  name="firstName"
+                  placeholder="First Name"
+                  class="contact-input"
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  placeholder="Last Name"
+                  class="contact-input"
+                  required
+                />
+              </div>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                class="contact-input"
+                required
+              />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Phone Number (Optional)"
+                class="contact-input"
+              />
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                class="contact-input"
+                rows="5"
+                required
+              ></textarea>
+
+              <div class="checkbox-wrapper">
+                <div class="custom-checkbox" id="newsletterCheckbox"></div>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    style="display: none"
+                    id="newsletterInput"
+                  />
+                  Did you like this website?
+                </label>
+              </div>
+
+              <button type="submit" class="submit-btn">
+                Send Message
+                <i class="fas fa-paper-plane ml-2"></i>
+              </button>
+            </form>
+          </div>
+
+          <!-- Info Side -->
+          <div class="info-side w-full lg:w-2/5">
+            <h3 class="text-2xl font-playfair mb-6">Contact Information</h3>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Visit Us</h4>
+                <p>
+                  KAFD, King Fahd Road,<br />
+                  Riyadh, Saudi Arabia
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Call Us</h4>
+                <p>No Number yet!</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h4 class="font-medium mb-1">Email Us</h4>
+                <p>FaisalSaweed@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="cafe-hours">
+              <h4 class="text-xl font-playfair mb-4">Café Hours</h4>
+              <div class="hours-grid">
+                <span>Monday - Friday</span>
+                <span>7:00 AM - 8:00 PM</span>
+                <span>Saturday</span>
+                <span>8:00 AM - 9:00 PM</span>
+                <span>Sunday</span>
+                <span>8:00 AM - 7:00 PM</span>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a href="#" class="social-link"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="social-link"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+      <div class="container mx-auto px-6">
+        <div class="map-wrapper bg-white rounded-2xl shadow-xl overflow-hidden">
+          <div class="map-header bg-primary-color p-8 text-white">
+            <h3 class="text-3xl font-playfair mb-3">Visit Our Location</h3>
+            <p class="opacity-90 text-lg">Find us in the heart of KAFD</p>
+          </div>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.7357944241387!2d46.636491776548436!3d24.741590448561357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee30a5b82c131%3A0x44eb8a6a11506d0!2sKing%20Abdullah%20Financial%20District%20-%20KAFD!5e0!3m2!1sen!2ssa!4v1708106171949!5m2!1sen!2ssa"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="map-footer p-8 bg-white border-t">
+            <div class="flex items-center text-brown-dark">
+              <i class="fas fa-location-dot mr-3 text-accent-color text-xl"></i>
+              <p class="text-lg">KAFD, King Fahd Road, Riyadh, Saudi Arabia</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
+      <p>
+        © 2025 The Bean Spot. Made by
+        <a
+          href="https://fs-17.github.io"
+          class="text-brown-medium hover:text-brown-dark transition duration-300"
+          style="
+            font-weight: 700;
+            color: #d2691e;
+            font-family: 'Playfair Display', serif;
+          "
+          >Faisal Alsaweed</a
+        >
+      </p>
+    </footer>
+
+    <script>
+      // Checkbox functionality
+      const checkbox = document.getElementById("newsletterCheckbox");
+      const newsletterInput = document.getElementById("newsletterInput");
+
+      checkbox.addEventListener("click", () => {
+        checkbox.classList.toggle("checked");
+        newsletterInput.checked = checkbox.classList.contains("checked");
+      });
+
+      // Form submission
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+
+          // Add animation to button
+          const button = e.target.querySelector("button");
+          button.innerHTML =
+            '<i class="fas fa-circle-notch fa-spin"></i> Sending...';
+          button.disabled = true;
+
+          try {
+            await fetch(e.target.action, {
+              method: "POST",
+              body: new FormData(e.target),
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            button.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            button.style.background = "#2ecc71";
+            e.target.reset();
+            checkbox.classList.remove("checked");
+
+            setTimeout(() => {
+              button.innerHTML =
+                'Send Message <i class="fas fa-paper-plane ml-2"></i>';
+              button.style.background = "";
+              button.disabled = false;
+            }, 3000);
+          } catch (error) {
+            button.innerHTML =
+              '<i class="fas fa-exclamation-triangle"></i> Error!';
+            button.style.background = "#e74c3c";
+
+            setTimeout(() => {
+              button.innerHTML =
+                'Send Message <i class="fas fa-paper-plane ml-2"></i>';
+              button.style.background = "";
+              button.disabled = false;
+            }, 3000);
+          }
+        });
+
+      // Intersection Observer for animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".fade-in, .slide-up-fade-in").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+  </body>
+</html>

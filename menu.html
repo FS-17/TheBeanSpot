@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Menu - Premium Coffee Selection</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body class="bg-cream font-poppins text-brown-dark antialiased">
+    <nav class="bg-white shadow-md sticky top-0 z-10">
+      <div
+        class="container mx-auto px-6 py-5 flex justify-between items-center"
+      >
+        <a
+          href="index.html"
+          class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
+        >
+          The Bean Spot
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a
+            href="menu.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative active"
+            >Menu</a
+          >
+
+          <a
+            href="about.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >About Us</a
+          >
+          <a
+            href="contact.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >Contact & Location</a
+          >
+        </div>
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
+        <a href="menu.html" class="block px-6 py-3 hover:bg-gray-100 active"
+          >Menu</a
+        >
+        <a href="about.html" class="block px-6 py-3 hover:bg-gray-100"
+          >About Us</a
+        >
+        <a href="contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >Contact & Location</a
+        >
+      </div>
+    </nav>
+
+    <section class="menu-grid-container bg-neutral-50">
+      <div class="category-section" data-category="hot">
+        <h2 class="category-title font-playfair">Hot Coffee Classics</h2>
+        <p class="category-description">
+          Traditional favorites served at the perfect temperature
+        </p>
+        <div class="menu-grid">
+          <div class="menu-item" data-aos="fade-up">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Cafe_Americano.jpg"
+                alt="Cafe Americano"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Cafe Americano</h3>
+              <p>
+                Bold espresso shots diluted with hot water for a rich cup of
+                coffee
+              </p>
+              <span class="price">$4.50</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="menu-item-image-wrapper">
+              <img src="./assets/coffee/Cafe_Latte.jpg" alt="Cafe Latte" />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Cafe Latte</h3>
+              <p>Espresso with steamed milk and a light layer of foam</p>
+              <span class="price">$5.00</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="menu-item-image-wrapper">
+              <img src="./assets/coffee/Cappuccino.jpg" alt="Cappuccino" />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Cappuccino</h3>
+              <p>Equal parts espresso, steamed milk, and milk foam</p>
+              <span class="price">$5.00</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Caramel_Macchiato.jpg"
+                alt="Caramel Macchiato"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Caramel Macchiato</h3>
+              <p>
+                Vanilla-flavored drink marked with espresso and caramel drizzle
+              </p>
+              <span class="price">$5.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-section" data-category="cold">
+        <h2 class="category-title">Refreshing Cold Brews</h2>
+        <p class="category-description">
+          Perfectly chilled coffee creations for any time of day
+        </p>
+        <div class="menu-grid">
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Cold_Brew_Tonic.jpg"
+                alt="Cold Brew Tonic"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Cold Brew Tonic</h3>
+              <p>
+                Smooth cold brew coffee with tonic water and a hint of citrus
+              </p>
+              <span class="price">$5.75</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Iced_Americano.jpg"
+                alt="Iced Americano"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Iced Americano</h3>
+              <p>Chilled espresso topped with cold water and ice</p>
+              <span class="price">$4.75</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="600">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Iced_Caramel_Macchiato.jpg"
+                alt="Iced Caramel Macchiato"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Iced Caramel Macchiato</h3>
+              <p>Cold milk and vanilla with espresso and caramel drizzle</p>
+              <span class="price">$5.75</span>
+            </div>
+          </div>
+
+          <div class="menu-item" data-aos="fade-up" data-aos-delay="700">
+            <div class="menu-item-image-wrapper">
+              <img
+                src="./assets/coffee/Iced_Vanilla_Latte.jpg"
+                alt="Iced Vanilla Latte"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <h3>Iced Vanilla Latte</h3>
+              <p>Espresso and cold milk flavored with vanilla syrup</p>
+              <span class="price">$5.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-section" data-category="specialty">
+        <h2 class="category-title">Signature Specialties</h2>
+        <p class="category-description">
+          Exclusive creations that showcase our dedication to coffee artistry
+          and innovation
+        </p>
+        <div class="menu-grid specialty-grid">
+          <div
+            class="menu-item signature-item"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="menu-item-image-wrapper">
+              <img
+                src="https://images.squarespace-cdn.com/content/v1/5418a5bae4b0877352524377/1621191229020-MEEM6YDMUOKGCZC4CQXJ/lavender-latte-paderno_thefarmersdaughter-14.jpg"
+                alt="Lavender Latte"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <div class="signature-badge">Signature</div>
+              <h3>Lavender Latte</h3>
+              <p>
+                A harmonious blend of espresso and steamed milk infused with our
+                house-made lavender syrup, topped with delicate dried lavender
+                buds
+              </p>
+              <span class="price">$6.00</span>
+            </div>
+          </div>
+
+          <div
+            class="menu-item signature-item"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="menu-item-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1609331793651-fade2f964abf?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Honey Rose Latte"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <div class="signature-badge">Signature</div>
+              <h3>Honey Rose Latte</h3>
+              <p>
+                Velvety espresso combined with rose-infused honey and steamed
+                milk, garnished with dried rose petals and a honey drizzle
+              </p>
+              <span class="price">$6.50</span>
+            </div>
+          </div>
+
+          <div
+            class="menu-item signature-item"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="menu-item-image-wrapper">
+              <img
+                src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_683/https://loveisinmytummy.com/wp-content/uploads/2019/09/Badam-Milk-4.jpg"
+                alt="Cardamom Pistachio Latte"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <div class="signature-badge">Signature</div>
+              <h3>Cardamom Pistachio Latte</h3>
+              <p>
+                Middle Eastern-inspired latte featuring freshly ground cardamom,
+                pistachio cream, and our signature espresso blend
+              </p>
+              <span class="price">$7.00</span>
+            </div>
+          </div>
+
+          <div
+            class="menu-item signature-item"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="menu-item-image-wrapper">
+              <img
+                src="https://cdn.prod.website-files.com/652f1dc57f648485e3aee801/67a20fa434ea6b02e0de6815_ojELW-t3mZvycQuru8FN-_image.webp"
+                alt="Maple Smoke Latte"
+              />
+              <div class="menu-item-overlay">
+                <span class="view-details">View Details</span>
+              </div>
+            </div>
+            <div class="menu-item-content">
+              <div class="signature-badge">Signature</div>
+              <h3>Maple Smoke Latte</h3>
+              <p>
+                A sophisticated blend of smoked maple syrup, double shot
+                espresso, and velvet microfoam, finished with maple dust
+              </p>
+              <span class="price">$7.50</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
+      <p>
+        © 2025 The Bean Spot. Made by
+        <a
+          href="https://fs-17.github.io"
+          class="text-brown-medium hover:text-brown-dark transition duration-300 font-playfair font-bold"
+          style="color: #d2691e"
+        >
+          Faisal Alsaweed
+        </a>
+      </p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        offset: 100,
+        once: true,
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        // Hide mobile menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !mobileMenuButton.contains(e.target) &&
+            !mobileMenu.contains(e.target)
+          ) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+
+        // Hide mobile menu on window resize
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
+      // Category filtering
+      document.querySelectorAll(".category-btn").forEach((button) => {
+        button.addEventListener("click", () => {
+          document
+            .querySelectorAll(".category-btn")
+            .forEach((btn) => btn.classList.remove("active"));
+          button.classList.add("active");
+
+          const category = button.dataset.category;
+          document.querySelectorAll(".category-section").forEach((section) => {
+            if (category === "all" || section.dataset.category === category) {
+              section.style.display = "block";
+            } else {
+              section.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
