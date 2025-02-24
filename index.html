@@ -417,6 +417,9 @@
       if (videoSection && video) {
         let playbackConst = 5;
 
+        // Preload the video
+        video.preload = "auto";
+
         window.addEventListener("scroll", () => {
           const rect = videoSection.getBoundingClientRect();
           if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
