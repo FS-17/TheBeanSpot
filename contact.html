@@ -496,6 +496,35 @@
     </footer>
 
     <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+        }
+
+        // Hide mobile menu when clicking outside
+        document.addEventListener("click", (e) => {
+          if (
+            !mobileMenuButton.contains(e.target) &&
+            !mobileMenu.contains(e.target)
+          ) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+
+        // Hide mobile menu on window resize
+        window.addEventListener("resize", () => {
+          if (window.innerWidth >= 768) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      });
+
       // Checkbox functionality
       const checkbox = document.getElementById("newsletterCheckbox");
       const newsletterInput = document.getElementById("newsletterInput");
