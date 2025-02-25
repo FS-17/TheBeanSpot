@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Our Menu - Premium Coffee Selection</title>
+    <title>قائمتنا - The Bean Spot</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -14,39 +14,62 @@
       rel="stylesheet"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --font-arabic: "Cairo", "Segoe UI Arabic", sans-serif;
+      }
+      body {
+        font-family: var(--font-arabic) !important;
+      }
+      .font-playfair {
+        font-family: var(--font-arabic) !important;
+        font-weight: 700;
+      }
+      h3 {
+        font-family: var(--font-arabic) !important;
+        font-weight: 700;
+      }
+      .category-title {
+        font-family: var(--font-arabic) !important;
+        font-weight: 700;
+      }
+    </style>
   </head>
-  <body class="bg-cream font-poppins text-brown-dark antialiased">
+  <body class="bg-cream text-brown-dark antialiased">
     <nav class="bg-white shadow-md sticky top-0 z-10">
       <div
         class="container mx-auto px-6 py-5 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="ar_index.html"
           class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
         >
           The Bean Spot
         </a>
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-reverse space-x-8">
           <a
-            href="menu.html"
+            href="ar_menu.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative active"
-            >Menu</a
+            >القائمة</a
           >
-
           <a
-            href="about.html"
+            href="ar_about.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >About Us</a
+            >من نحن</a
           >
           <a
-            href="contact.html"
+            href="ar_contact.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >Contact & Location</a
+            >اتصل بنا & الموقع</a
           >
           <a
-            href="./ar_menu.html"
+            href="./menu.html"
             class="font-cairo font-bold bg-brown-medium rounded-lg hover:bg-brown-dark transition duration-300"
-            >عربي</a
+            >English</a
           >
         </div>
         <div class="md:hidden">
@@ -68,75 +91,74 @@
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="menu.html" class="block px-6 py-3 hover:bg-gray-100 active"
-          >Menu</a
+        <a href="ar_menu.html" class="block px-6 py-3 hover:bg-gray-100 active"
+          >القائمة</a
         >
-        <a href="about.html" class="block px-6 py-3 hover:bg-gray-100"
-          >About Us</a
+        <a href="ar_about.html" class="block px-6 py-3 hover:bg-gray-100"
+          >من نحن</a
         >
-        <a href="contact.html" class="block px-6 py-3 hover:bg-gray-100"
-          >Contact & Location</a
+        <a href="ar_contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >اتصل بنا & الموقع</a
         >
         <a
-          href="./ar_menu.html"
+          href="./menu.html"
           class="block px-6 py-3 hover:bg-gray-100 font-cairo font-bold"
-          >عربي</a
+          >English</a
         >
       </div>
     </nav>
 
     <section class="menu-grid-container bg-neutral-50">
       <div class="category-section" data-category="hot">
-        <h2 class="category-title font-playfair">Hot Coffee Classics</h2>
+        <h2 class="category-title font-playfair">
+          المشروبات الساخنة الكلاسيكية
+        </h2>
         <p class="category-description">
-          Traditional favorites served at the perfect temperature
+          المفضلات التقليدية تقدم في درجة الحرارة المثالية
         </p>
         <div class="menu-grid">
           <div class="menu-item" data-aos="fade-up">
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Cafe_Americano.jpg"
-                alt="Cafe Americano"
+                alt="كافيه أمريكانو"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Cafe Americano</h3>
-              <p>
-                Bold espresso shots diluted with hot water for a rich cup of
-                coffee
-              </p>
-              <span class="price">$4.50</span>
+              <h3>كافيه أمريكانو</h3>
+              <p>جرعات إسبريسو قوية مخففة بالماء الساخن لفنجان قهوة غني</p>
+              <span class="price">١٦.٨٨ ريال</span>
             </div>
           </div>
 
           <div class="menu-item" data-aos="fade-up" data-aos-delay="100">
             <div class="menu-item-image-wrapper">
-              <img src="./assets/coffee/Cafe_Latte.jpg" alt="Cafe Latte" />
+              <img src="./assets/coffee/Cafe_Latte.jpg" alt="كافيه لاتيه" />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Cafe Latte</h3>
-              <p>Espresso with steamed milk and a light layer of foam</p>
-              <span class="price">$5.00</span>
+              <h3>كافيه لاتيه</h3>
+              <p>إسبريسو مع حليب مبخر وطبقة خفيفة من الرغوة</p>
+              <span class="price">١٨.٧٥ ريال</span>
             </div>
           </div>
 
           <div class="menu-item" data-aos="fade-up" data-aos-delay="200">
             <div class="menu-item-image-wrapper">
-              <img src="./assets/coffee/Cappuccino.jpg" alt="Cappuccino" />
+              <img src="./assets/coffee/Cappuccino.jpg" alt="كابتشينو" />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Cappuccino</h3>
-              <p>Equal parts espresso, steamed milk, and milk foam</p>
-              <span class="price">$5.00</span>
+              <h3>كابتشينو</h3>
+              <p>أجزاء متساوية من الإسبريسو والحليب المبخر ورغوة الحليب</p>
+              <span class="price">١٨.٧٥ ريال</span>
             </div>
           </div>
 
@@ -144,45 +166,41 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Caramel_Macchiato.jpg"
-                alt="Caramel Macchiato"
+                alt="كراميل ماكياتو"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Caramel Macchiato</h3>
-              <p>
-                Vanilla-flavored drink marked with espresso and caramel drizzle
-              </p>
-              <span class="price">$5.50</span>
+              <h3>كراميل ماكياتو</h3>
+              <p>مشروب بنكهة الفانيليا مع جرعة إسبريسو وطبقة من صوص الكراميل</p>
+              <span class="price">٢٠.٦٣ ريال</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="category-section" data-category="cold">
-        <h2 class="category-title">Refreshing Cold Brews</h2>
+        <h2 class="category-title">مشروبات القهوة الباردة المنعشة</h2>
         <p class="category-description">
-          Perfectly chilled coffee creations for any time of day
+          إبداعات القهوة المبردة المثالية لأي وقت من اليوم
         </p>
         <div class="menu-grid">
           <div class="menu-item" data-aos="fade-up" data-aos-delay="400">
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Cold_Brew_Tonic.jpg"
-                alt="Cold Brew Tonic"
+                alt="كولد برو تونك"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Cold Brew Tonic</h3>
-              <p>
-                Smooth cold brew coffee with tonic water and a hint of citrus
-              </p>
-              <span class="price">$5.75</span>
+              <h3>كولد برو تونك</h3>
+              <p>قهوة كولد برو ناعمة مع ماء تونك ولمسة من الحمضيات</p>
+              <span class="price">٢١.٥٦ ريال</span>
             </div>
           </div>
 
@@ -190,16 +208,16 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Iced_Americano.jpg"
-                alt="Iced Americano"
+                alt="آيسد أمريكانو"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Iced Americano</h3>
-              <p>Chilled espresso topped with cold water and ice</p>
-              <span class="price">$4.75</span>
+              <h3>آيسد أمريكانو</h3>
+              <p>إسبريسو مبرد مع ماء بارد وثلج</p>
+              <span class="price">١٧.٨١ ريال</span>
             </div>
           </div>
 
@@ -207,16 +225,16 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Iced_Caramel_Macchiato.jpg"
-                alt="Iced Caramel Macchiato"
+                alt="آيسد كراميل ماكياتو"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Iced Caramel Macchiato</h3>
-              <p>Cold milk and vanilla with espresso and caramel drizzle</p>
-              <span class="price">$5.75</span>
+              <h3>آيسد كراميل ماكياتو</h3>
+              <p>حليب بارد وفانيليا مع جرعة إسبريسو وطبقة من صوص الكراميل</p>
+              <span class="price">٢١.٥٦ ريال</span>
             </div>
           </div>
 
@@ -224,26 +242,25 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/coffee/Iced_Vanilla_Latte.jpg"
-                alt="Iced Vanilla Latte"
+                alt="آيسد فانيلا لاتيه"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <h3>Iced Vanilla Latte</h3>
-              <p>Espresso and cold milk flavored with vanilla syrup</p>
-              <span class="price">$5.50</span>
+              <h3>آيسد فانيلا لاتيه</h3>
+              <p>إسبريسو وحليب بارد بنكهة شراب الفانيليا</p>
+              <span class="price">٢٠.٦٣ ريال</span>
             </div>
           </div>
         </div>
       </div>
 
       <div class="category-section" data-category="specialty">
-        <h2 class="category-title">Signature Specialties</h2>
+        <h2 class="category-title">تخصصاتنا المميزة</h2>
         <p class="category-description">
-          Exclusive creations that showcase our dedication to coffee artistry
-          and innovation
+          إبداعات حصرية تعكس تفانينا في فن القهوة والابتكار
         </p>
         <div class="menu-grid specialty-grid">
           <div
@@ -254,21 +271,20 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="https://images.squarespace-cdn.com/content/v1/5418a5bae4b0877352524377/1621191229020-MEEM6YDMUOKGCZC4CQXJ/lavender-latte-paderno_thefarmersdaughter-14.jpg"
-                alt="Lavender Latte"
+                alt="لاتيه اللافندر"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <div class="signature-badge">Signature</div>
-              <h3>Lavender Latte</h3>
+              <div class="signature-badge">مميز</div>
+              <h3>لاتيه اللافندر</h3>
               <p>
-                A harmonious blend of espresso and steamed milk infused with our
-                house-made lavender syrup, topped with delicate dried lavender
-                buds
+                مزيج متناغم من الإسبريسو والحليب المبخر المنكه بشراب اللافندر
+                محلي الصنع، مزين ببراعم اللافندر المجففة
               </p>
-              <span class="price">$6.00</span>
+              <span class="price">٢٢.٥٠ ريال</span>
             </div>
           </div>
 
@@ -280,20 +296,20 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="./assets/photo-1609331793651-fade2f964abf.jpg"
-                alt="Honey Rose Latte"
+                alt="لاتيه العسل والورد"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <div class="signature-badge">Signature</div>
-              <h3>Honey Rose Latte</h3>
+              <div class="signature-badge">مميز</div>
+              <h3>لاتيه العسل والورد</h3>
               <p>
-                Velvety espresso combined with rose-infused honey and steamed
-                milk, garnished with dried rose petals and a honey drizzle
+                إسبريسو مخملي ممزوج بعسل منكه بالورد وحليب مبخر، مزين ببتلات
+                الورد المجففة وقطرات العسل
               </p>
-              <span class="price">$6.50</span>
+              <span class="price">٢٤.٣٨ ريال</span>
             </div>
           </div>
 
@@ -305,20 +321,20 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_683/https://loveisinmytummy.com/wp-content/uploads/2019/09/Badam-Milk-4.jpg"
-                alt="Cardamom Pistachio Latte"
+                alt="لاتيه الهيل والفستق"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <div class="signature-badge">Signature</div>
-              <h3>Cardamom Pistachio Latte</h3>
+              <div class="signature-badge">مميز</div>
+              <h3>لاتيه الهيل والفستق</h3>
               <p>
-                Middle Eastern-inspired latte featuring freshly ground cardamom,
-                pistachio cream, and our signature espresso blend
+                لاتيه مستوحى من الشرق الأوسط يتميز بالهيل المطحون الطازج وكريمة
+                الفستق ومزيج الإسبريسو الخاص بنا
               </p>
-              <span class="price">$7.00</span>
+              <span class="price">٢٦.٢٥ ريال</span>
             </div>
           </div>
 
@@ -330,20 +346,20 @@
             <div class="menu-item-image-wrapper">
               <img
                 src="https://cdn.prod.website-files.com/652f1dc57f648485e3aee801/67a20fa434ea6b02e0de6815_ojELW-t3mZvycQuru8FN-_image.webp"
-                alt="Maple Smoke Latte"
+                alt="لاتيه القيقب المدخن"
               />
               <div class="menu-item-overlay">
-                <span class="view-details">View Details</span>
+                <span class="view-details">عرض التفاصيل</span>
               </div>
             </div>
             <div class="menu-item-content">
-              <div class="signature-badge">Signature</div>
-              <h3>Maple Smoke Latte</h3>
+              <div class="signature-badge">مميز</div>
+              <h3>لاتيه القيقب المدخن</h3>
               <p>
-                A sophisticated blend of smoked maple syrup, double shot
-                espresso, and velvet microfoam, finished with maple dust
+                مزيج متطور من شراب القيقب المدخن وجرعة مزدوجة من الإسبريسو ورغوة
+                مخملية، مزين بغبار القيقب
               </p>
-              <span class="price">$7.50</span>
+              <span class="price">٢٨.١٣ ريال</span>
             </div>
           </div>
         </div>
@@ -352,13 +368,17 @@
 
     <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
       <p>
-        © 2025 The Bean Spot. Made by
+        © 2025 The Bean Spot. صنع بواسطة
         <a
           href="https://fs-17.github.io"
-          class="text-brown-medium hover:text-brown-dark transition duration-300 font-playfair font-bold"
-          style="color: #d2691e"
+          class="text-brown-medium hover:text-brown-dark transition duration-300"
+          style="
+            font-weight: 700;
+            color: #d2691e;
+            font-family: var(--font-arabic);
+          "
         >
-          Faisal Alsaweed
+          فيصل السويد
         </a>
       </p>
     </footer>

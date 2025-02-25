@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bean Spot - Homepage</title>
+    <title>The Bean Spot - الصفحة الرئيسية</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -34,96 +34,98 @@
       .wave-path {
         fill: var(--secondary-color);
       }
+
+      :root {
+        --font-arabic: "Cairo", "Segoe UI Arabic", sans-serif;
+      }
+      body {
+        font-family: var(--font-arabic) !important;
+      }
+      .font-playfair {
+        font-family: var(--font-arabic);
+        font-weight: 700;
+      }
+      .rtl-flip {
+        transform: scaleX(-1);
+      }
+      h2,
+      h3,
+      h4 {
+        font-family: var(--font-arabic) !important;
+        font-weight: 600;
+      }
     </style>
   </head>
-  <body class="bg-cream font-poppins text-brown-dark antialiased">
+  <body class="bg-cream text-brown-dark antialiased">
     <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-10">
       <div
         class="container mx-auto px-6 py-5 flex justify-between items-center"
       >
         <a
-          href="/"
-          class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
-          >The Bean Spot</a
+          href="ar_index.html"
+          class="text-xl font-bold text-brown-dark hover:text-brown-medium transition duration-300"
         >
-        <div class="hidden md:flex space-x-8 items-center">
+          The Bean Spot
+        </a>
+        <div class="hidden md:flex space-x-reverse space-x-8">
           <a
-            href="./menu.html"
+            href="ar_menu.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >Menu</a
-          >
-
-          <a
-            href="./about.html"
-            class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >About Us</a
+            >القائمة</a
           >
           <a
-            href="./contact.html"
+            href="ar_about.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >Contact & Location</a
+            >من نحن</a
           >
           <a
-            href="./ar_index.html"
+            href="ar_contact.html"
+            class="navbar-link hover:text-brown-medium transition duration-300 relative"
+            >اتصل بنا & الموقع</a
+          >
+          <a
+            href="./index.html"
             class="font-cairo font-bold bg-brown-medium rounded-lg hover:bg-brown-dark transition duration-300"
-            >عربي</a
+            >English</a
           >
         </div>
-        <!-- Mobile Menu Button -->
-        <div class="md:hidden">
-          <button id="mobile-menu-button" class="focus:outline-none">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              ></path>
-            </svg>
-          </button>
-        </div>
+        <!-- Mobile menu button -->
       </div>
-      <!-- Mobile Menu -->
+      <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="./menu.html" class="block px-6 py-3 hover:bg-gray-100">Menu</a>
-
-        <a href="./about.html" class="block px-6 py-3 hover:bg-gray-100"
-          >About Us</a
+        <a href="ar_menu.html" class="block px-6 py-3 hover:bg-gray-100"
+          >القائمة</a
         >
-        <a href="./contact.html" class="block px-6 py-3 hover:bg-gray-100"
-          >Contact & Location</a
+        <a href="ar_about.html" class="block px-6 py-3 hover:bg-gray-100"
+          >من نحن</a
+        >
+        <a href="ar_contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >اتصل بنا & الموقع</a
         >
         <a
-          href="./ar_index.html"
+          href="./index.html"
           class="block px-6 py-3 hover:bg-gray-100 font-cairo font-bold"
-          >عربي</a
+          >English</a
         >
       </div>
     </nav>
 
-    <!-- Intro Hero Section -->
+    <!-- Hero Section -->
     <section class="intro-hero-section">
       <div class="intro-hero-parallax"></div>
       <div class="intro-hero-gradient"></div>
       <div class="intro-hero-content">
-        <span class="hero-subtitle">Welcome to</span>
+        <span class="hero-subtitle">مرحباً بكم في</span>
         <h1 class="hero-title">The Bean Spot</h1>
         <p class="hero-description">
-          A Coffee Connoisseur's Journey: Where Passion and Craftsmanship Meet
-          in Every Cup
+          رحلة عشاق القهوة: حيث يلتقي الشغف والحرفية في كل فنجان
         </p>
       </div>
       <div class="hero-scroll-indicator">
-        <span>Scroll to Explore</span>
+        <span>اكتشف المزيد</span>
         <svg
-          class="scroll-arrow"
+          class="scroll-arrow rtl-flip"
           width="24"
           height="24"
           viewBox="0 0 24 24"
@@ -148,7 +150,7 @@
       </div>
     </section>
 
-    <!-- Image Text Section 1 - Bean Sourcing -->
+    <!-- Bean Sourcing Section -->
     <section class="image-text-section">
       <div
         class="image-text-image-container fade-in"
@@ -156,20 +158,19 @@
       >
         <img
           src="./assets/arabica.jpg"
-          alt="Sourcing Coffee Beans"
+          alt="حبوب القهوة المختارة"
           class="image-text-image"
         />
       </div>
-      <div class="image-text-content">
-        <h2 class="fade-in" style="animation-delay: 0.4s">
-          Meticulously Sourced Beans
+      <div class="image-text-content" dir="rtl" lang="ar">
+        <h2 class="fade-in" style="animation-delay: 0.4s" dir="rtl" lang="ar">
+          حبوب قهوة منتقاة بعناية
         </h2>
         <p class="slide-up-fade-in" style="animation-delay: 0.6s">
-          Our journey begins with a commitment to sourcing only the highest
-          quality Arabica beans. We travel the globe, partnering with farmers
-          who share our dedication to sustainable and ethical practices. From
-          the lush highlands to fertile valleys, we select beans that represent
-          the pinnacle of coffee excellence.
+          تبدأ رحلتنا بالتزامنا باختيار أجود حبوب الأرابيكا. نسافر حول العالم
+          للتعاون مع المزارعين الذين يشاركوننا التزامنا بالممارسات المستدامة
+          والأخلاقية. من المرتفعات الخضراء إلى الوديان الخصبة، نختار الحبوب التي
+          تمثل قمة التميز في عالم القهوة.
         </p>
       </div>
     </section>
@@ -184,10 +185,10 @@
           alt="Coffee bean sequence"
         />
         <div class="video-text-overlay" id="videoText">
-          <h2>From Bean to Perfection</h2>
+          <h2>من الحبة إلى الكمال</h2>
           <p>
-            Watch as we transform carefully selected coffee beans into the
-            perfect cup through our meticulous roasting process.
+            شاهد كيف نحول حبوب القهوة المختارة بعناية إلى فنجان مثالي من خلال
+            عملية التحميص الدقيقة.
           </p>
         </div>
       </div>
@@ -195,23 +196,23 @@
 
     <!-- Image Text Section 2 - Roasting Artistry (Reverse Layout) -->
     <section class="image-text-section roasting-section">
-      <div class="image-text-image-container" style="animation-delay: 0.1s">
+      <div
+        class="image-text-image-container"
+        style="animation-delay: 0.1s; left: 0px; right: auto"
+      >
         <img
           src="./assets/flowting.png"
-          alt="Coffee Roasting"
+          alt="تحميص القهوة"
           style="background: transparent"
         />
       </div>
       <div class="image-text-content">
-        <h2 class="fade-in" style="animation-delay: 0.4s">
-          The Art of Roasting
-        </h2>
+        <h2 class="fade-in" style="animation-delay: 0.4s">فن التحميص</h2>
         <p class="slide-up-fade-in" style="animation-delay: 0.6s">
-          Roasting is where science and art intertwine. Our master roasters
-          meticulously control every stage of the process, coaxing out the
-          unique flavor profiles within each bean. We roast in small batches to
-          ensure precision and consistency, unlocking the full potential of
-          every coffee we offer.
+          التحميص هو حيث يلتقي العلم والفن. يتحكم خبراء التحميص لدينا بدقة في كل
+          مرحلة من مراحل العملية، لاستخراج النكهات الفريدة داخل كل حبة. نقوم
+          بالتحميص بكميات صغيرة لضمان الدقة والاتساق، مما يطلق العنان للإمكانات
+          الكاملة لكل قهوة نقدمها.
         </p>
       </div>
     </section>
@@ -219,51 +220,48 @@
     <!-- Cafe Ambiance Section -->
     <section class="cafe-ambiance-section">
       <div class="ambiance-container">
-        <h2 class="section-title fade-in">Experience the Ambiance</h2>
+        <h2 class="section-title fade-in">اختبر الأجواء</h2>
         <p class="section-subtitle fade-in">
-          Step into a world where every detail is crafted for your comfort
+          ادخل إلى عالم حيث كل تفصيل مصمم لراحتك
         </p>
 
         <div class="ambiance-gallery">
           <div class="gallery-item large fade-in" style="animation-delay: 0.2s">
             <img
               src="./assets/photo-1445116572660-236099ec97a0.jpg"
-              alt="Main Cafe Space"
+              alt="المساحة الرئيسية للمقهى"
             />
             <div class="gallery-overlay">
-              <h3>Main Cafe Space</h3>
-              <p>Where comfort meets sophistication</p>
+              <h3>المساحة الرئيسية للمقهى</h3>
+              <p>حيث تلتقي الراحة بالأناقة</p>
             </div>
           </div>
           <div class="gallery-grid">
             <div class="gallery-item fade-in" style="animation-delay: 0.4s">
               <img
                 src="./assets/photo-1559496417-e7f25cb247f3.jpg"
-                alt="Cozy Corner"
+                alt="الركن الدافئ"
               />
               <div class="gallery-overlay">
-                <h3>Cozy Corner</h3>
-                <p>Perfect for intimate conversations</p>
+                <h3>الركن الدافئ</h3>
+                <p>مثالي للمحادثات الودية</p>
               </div>
             </div>
             <div class="gallery-item fade-in" style="animation-delay: 0.6s">
-              <img
-                src="./assets/pexels-photo-302896.jpg"
-                alt="Barista Station"
-              />
+              <img src="./assets/pexels-photo-302896.jpg" alt="ركن الباريستا" />
               <div class="gallery-overlay">
-                <h3>Barista Station</h3>
-                <p>Watch our artisans at work</p>
+                <h3>ركن الباريستا</h3>
+                <p>شاهد حرفيينا أثناء العمل</p>
               </div>
             </div>
             <div class="gallery-item fade-in" style="animation-delay: 0.8s">
               <img
                 src="./assets/pexels-photo-17305194.jpg"
-                alt="Outdoor Seating"
+                alt="الجلسات الخارجية"
               />
               <div class="gallery-overlay">
-                <h3>Outdoor Seating</h3>
-                <p>Enjoy nature with your coffee</p>
+                <h3>الجلسات الخارجية</h3>
+                <p>استمتع بالطبيعة مع قهوتك</p>
               </div>
             </div>
           </div>
@@ -274,20 +272,18 @@
     <!-- Barista Artistry Section -->
     <section class="barista-artistry-section">
       <div class="barista-container">
-        <h2 class="section-title fade-in">Barista Artistry</h2>
-        <p class="section-subtitle fade-in">
-          Crafting perfection, one cup at a time
-        </p>
+        <h2 class="section-title fade-in">فن الباريستا</h2>
+        <p class="section-subtitle fade-in">نصنع الكمال، فنجان تلو الآخر</p>
 
         <div class="barista-showcase">
           <div class="barista-main fade-in" style="animation-delay: 0.2s">
             <img
               src="./assets/photo-1442512595331-e89e73853f31.jpg"
-              alt="Master Barista"
+              alt="كبير الباريستا"
             />
             <div class="main-overlay">
-              <h3>Our Master Baristas</h3>
-              <p>Passionate craftsmen dedicated to the perfect brew</p>
+              <h3>باريستا متخصصون</h3>
+              <p>حرفيون شغوفون ملتزمون بتحضير القهوة المثالية</p>
             </div>
           </div>
 
@@ -309,8 +305,8 @@
                   />
                 </svg>
               </div>
-              <h4>Expert Training</h4>
-              <p>Continuous education and skill development for our baristas</p>
+              <h4>تدريب متخصص</h4>
+              <p>تعليم مستمر وتطوير المهارات لباريستا لدينا</p>
             </div>
 
             <div class="detail-card fade-in" style="animation-delay: 0.6s">
@@ -330,8 +326,8 @@
                   />
                 </svg>
               </div>
-              <h4>Precision & Care</h4>
-              <p>Every detail matters in creating your perfect cup</p>
+              <h4>الدقة والعناية</h4>
+              <p>كل تفصيل مهم في صنع فنجانك المثالي</p>
             </div>
 
             <div class="detail-card fade-in" style="animation-delay: 0.8s">
@@ -351,8 +347,8 @@
                   />
                 </svg>
               </div>
-              <h4>Passion & Creativity</h4>
-              <p>Artistic expression in every latte art design</p>
+              <h4>الشغف والإبداع</h4>
+              <p>التعبير الفني في كل تصميم لاتيه آرت</p>
             </div>
           </div>
         </div>
@@ -363,38 +359,42 @@
     <!-- CTA Section -->
     <section class="cta-section">
       <h2 class="font-playfair cta-section-title fade-in">
-        Ready to Begin Your Coffee Journey?
+        هل أنت مستعد لبدء رحلتك مع القهوة؟
       </h2>
       <p class="fade-in" style="animation-delay: 0.2s">
-        Visit The Bean Spot and discover a world of exceptional coffee. Explore
-        our menu, find our locations, and learn more about our story.
+        قم بزيارة The Bean Spot واكتشف عالماً من القهوة الاستثنائية. استكشف
+        قائمتنا، تعرف على مواقعنا، واعرف المزيد عن قصتنا.
       </p>
       <a
-        href="./menu.html"
+        href="ar_menu.html"
         class="button-gold fade-in"
         style="animation-delay: 0.4s"
-        >Discover Our Menu</a
       >
+        اكتشف قائمتنا
+      </a>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
       <p>
-        © 2025 The Bean Spot. Made by
+        © 2025 The Bean Spot. صنع بواسطة
         <a
           href="https://fs-17.github.io"
           class="text-brown-medium hover:text-brown-dark transition duration-300"
           style="
             font-weight: 700;
             color: #d2691e;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-arabic);
           "
-          >Faisal Alsaweed</a
         >
+          فيصل السويد
+        </a>
       </p>
     </footer>
 
     <script>
+      const totalFrames = 60; // Total number of frames
+
       preloadbeansimage();
 
       // Mobile Menu Toggle (JS) - Same as before
@@ -454,8 +454,6 @@
       const textOverlay = document.getElementById("videoText");
 
       if (imageSection && sequenceImage) {
-        const totalFrames = 85; // Total number of frames
-
         window.addEventListener("scroll", () => {
           const rect = imageSection.getBoundingClientRect();
           if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
@@ -506,7 +504,6 @@
 
       // Preload images for the image sequence
       function preloadbeansimage() {
-        const totalFrames = 85;
         for (let i = 1; i <= totalFrames; i++) {
           const paddedFrame = i.toString().padStart(3, "0");
           const img = new Image();

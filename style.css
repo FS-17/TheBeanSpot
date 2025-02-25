@@ -352,7 +352,9 @@
   .roasting-section {
   position:relative;
   padding:8rem 0;
-  overflow:visible
+  overflow:hidden; /* Prevent image overflow */
+  min-height:600px; /* Set minimum height */
+  width:100%;
   }
   
   .roasting-section .image-text-content {
@@ -373,6 +375,7 @@
   z-index:2;
   margin:0;
   filter:drop-shadow(0 10px 20px #00000026);
+  pointer-events:none; /* Prevent image from interfering with interactions */
   animation:float 10s ease-in-out infinite
   }
   
@@ -407,6 +410,13 @@
   .roasting-section .image-text-content {
   max-width:100%;
   margin-left:0
+  }
+  }
+  
+  @media (max-width: 768px) {
+  .roasting-section {
+  min-height:auto;
+  padding:4rem 0;
   }
   }
   

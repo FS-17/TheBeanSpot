@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us - The Bean Spot</title>
+    <title>من نحن - The Bean Spot</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -15,11 +15,43 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
     <style>
+      /* Add at the top of your style section */
+      :root {
+        --font-arabic: "Cairo", "Segoe UI Arabic", sans-serif;
+      }
+
+      body {
+        font-family: var(--font-arabic);
+      }
+
+      .font-playfair {
+        font-family: var(--font-arabic);
+        font-weight: 700;
+      }
+
+      .navbar-link {
+        font-family: var(--font-arabic);
+      }
+
+      .hero-title {
+        font-family: var(--font-arabic);
+        font-weight: 700;
+      }
+
+      .hero-description {
+        font-family: var(--font-arabic);
+        font-weight: 400;
+      }
+
       /* About Hero Section */
       .about-hero-section {
         position: relative;
@@ -119,38 +151,38 @@
       }
     </style>
   </head>
-  <body class="bg-cream font-poppins text-brown-dark antialiased">
+  <body class="bg-cream text-brown-dark antialiased">
     <!-- Navbar -->
     <nav class="bg-white shadow-md sticky top-0 z-10">
       <div
         class="container mx-auto px-6 py-5 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="ar_index.html"
           class="text-xl font-bold text-brown-dark font-playfair hover:text-brown-medium transition duration-300"
           >The Bean Spot</a
         >
-        <div class="hidden md:flex space-x-8">
+        <div class="hidden md:flex space-x-reverse space-x-8">
           <a
-            href="menu.html"
+            href="ar_menu.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >Menu</a
+            >القائمة</a
           >
 
           <a
-            href="about.html"
+            href="ar_about.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative active"
-            >About Us</a
+            >من نحن</a
           >
           <a
-            href="contact.html"
+            href="ar_contact.html"
             class="navbar-link hover:text-brown-medium transition duration-300 relative"
-            >Contact & Location</a
+            >اتصل بنا & الموقع</a
           >
           <a
-            href="./ar_about.html"
+            href="./about.html"
             class="font-cairo font-bold bg-brown-medium rounded-lg hover:bg-brown-dark transition duration-300"
-            >عربي</a
+            >English</a
           >
         </div>
         <div class="md:hidden">
@@ -173,17 +205,19 @@
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
-        <a href="menu.html" class="block px-6 py-3 hover:bg-gray-100">Menu</a>
-        <a href="about.html" class="block px-6 py-3 hover:bg-gray-100 active"
-          >About Us</a
+        <a href="ar_menu.html" class="block px-6 py-3 hover:bg-gray-100"
+          >القائمة</a
         >
-        <a href="contact.html" class="block px-6 py-3 hover:bg-gray-100"
-          >Contact & Location</a
+        <a href="ar_about.html" class="block px-6 py-3 hover:bg-gray-100 active"
+          >من نحن</a
+        >
+        <a href="ar_contact.html" class="block px-6 py-3 hover:bg-gray-100"
+          >اتصل بنا & الموقع</a
         >
         <a
-          href="./ar_about.html"
+          href="./about.html"
           class="block px-6 py-3 hover:bg-gray-100 font-cairo font-bold"
-          >عربي</a
+          >English</a
         >
       </div>
     </nav>
@@ -193,13 +227,11 @@
       <div class="about-hero-parallax"></div>
       <div class="about-hero-gradient"></div>
       <div class="about-hero-content">
-        <span class="hero-subtitle fade-in">Our Story</span>
-        <h1 class="hero-title slide-up-fade-in">
-          Crafting Exceptional Coffee Experiences
-        </h1>
+        <span class="hero-subtitle fade-in">قصتنا</span>
+        <h1 class="hero-title slide-up-fade-in">صنع تجارب قهوة استثنائية</h1>
         <p class="hero-description slide-up-fade-in">
-          Since 2010, The Bean Spot has been dedicated to bringing you the
-          finest coffee, sourced ethically and crafted with passion.
+          منذ عام 2010، كانت The Bean Spot مكرسة لجلب أفضل أنواع القهوة، التي
+          يتم الحصول عليها بشكل أخلاقي وصنعها بشغف.
         </p>
       </div>
       <div class="wave-bottom">
@@ -227,19 +259,18 @@
               muted
             ></video>
           </div>
-          <div class="md:w-1/2 md:pl-12">
+          <div class="md:w-1/2 md:pr-12">
             <h2 class="text-4xl font-playfair font-bold mb-6 fade-in">
-              Our Journey
+              رحلتنا
             </h2>
             <p class="text-lg mb-4 slide-up-fade-in">
-              The Bean Spot was founded by coffee enthusiasts who dreamed of
-              sharing their love for exceptional coffee. From a humble café,
-              we’ve grown into a cherished community space, celebrated for our
-              warm atmosphere and unwavering commitment to quality.
+              تأسست The Bean Spot من قبل عشاق القهوة الذين حلموا بمشاركة حبهم
+              للقهوة الاستثنائية. من مقهى متواضع، نمونا إلى مساحة مجتمعية
+              محبوبة، مشهورة بجوها الدافئ والتزامها الثابت بالجودة.
             </p>
             <p class="text-lg slide-up-fade-in">
-              We source the finest beans globally, perfecting our craft to
-              deliver unique flavors in every cup.
+              نحن نحصل على أفضل الحبوب من جميع أنحاء العالم، ونتقن حرفتنا لتقديم
+              نكهات فريدة في كل كوب.
             </p>
           </div>
         </div>
@@ -250,29 +281,32 @@
     <section class="our-values-section bg-neutral-light py-16">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-playfair font-bold text-center mb-12 fade-in">
-          What We Stand For
+          ما نمثله
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="value-card text-center fade-in">
             <i class="fas fa-leaf text-4xl icon-brown mb-4"></i>
-            <h3 class="text-2xl font-playfair mb-2">Sustainability</h3>
-            <p>We prioritize ethical sourcing and eco-friendly practices.</p>
+            <h3 class="text-2xl font-playfair mb-2">الاستدامة</h3>
+            <p>
+              نحن نعطي الأولوية للحصول على المصادر الأخلاقية والممارسات الصديقة
+              للبيئة.
+            </p>
           </div>
           <div
             class="value-card text-center fade-in"
             style="animation-delay: 0.2s"
           >
             <i class="fas fa-users text-4xl icon-brown mb-4"></i>
-            <h3 class="text-2xl font-playfair mb-2">Community</h3>
-            <p>We foster connection and belonging through every brew.</p>
+            <h3 class="text-2xl font-playfair mb-2">المجتمع</h3>
+            <p>نحن نعزز الاتصال والانتماء من خلال كل فنجان.</p>
           </div>
           <div
             class="value-card text-center fade-in"
             style="animation-delay: 0.4s"
           >
             <i class="fas fa-award text-4xl icon-brown mb-4"></i>
-            <h3 class="text-2xl font-playfair mb-2">Quality</h3>
-            <p>Every cup reflects our dedication to excellence.</p>
+            <h3 class="text-2xl font-playfair mb-2">الجودة</h3>
+            <p>كل فنجان يعكس تفانينا في التميز.</p>
           </div>
         </div>
       </div>
@@ -282,7 +316,7 @@
     <section class="coffee-journey-section bg-cream py-16">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-playfair font-bold text-center mb-12 fade-in">
-          From Bean to Cup
+          من الحبة إلى الكوب
         </h2>
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="journey-step mb-8 md:mb-0 fade-in">
@@ -292,8 +326,11 @@
               class="rounded-lg shadow-lg mb-4 mx-auto"
               style="width: 300px; height: 200px; object-fit: cover"
             />
-            <h3 class="text-2xl font-playfair mb-2">Sourcing</h3>
-            <p>We partner with farmers worldwide for the best beans.</p>
+            <h3 class="text-2xl font-playfair mb-2">الحصول على المصادر</h3>
+            <p>
+              نحن نتعاون مع المزارعين في جميع أنحاء العالم للحصول على أفضل
+              الحبوب.
+            </p>
           </div>
           <div
             class="journey-step mb-8 md:mb-0 fade-in"
@@ -305,8 +342,8 @@
               class="rounded-lg shadow-lg mb-4 mx-auto"
               style="width: 300px; height: 200px; object-fit: cover"
             />
-            <h3 class="text-2xl font-playfair mb-2">Roasting</h3>
-            <p>Our roasters craft each batch with precision.</p>
+            <h3 class="text-2xl font-playfair mb-2">التحميص</h3>
+            <p>يحضر محمصونا كل دفعة بدقة.</p>
           </div>
           <div class="journey-step fade-in" style="animation-delay: 0.4s">
             <img
@@ -315,8 +352,8 @@
               class="rounded-lg shadow-lg mb-4 mx-auto"
               style="width: 300px; height: 200px; object-fit: cover"
             />
-            <h3 class="text-2xl font-playfair mb-2">Brewing</h3>
-            <p>Baristas perfect every cup with skill and care.</p>
+            <h3 class="text-2xl font-playfair mb-2">التخمير</h3>
+            <p>يتقن الباريستا كل فنجان بمهارة وعناية.</p>
           </div>
         </div>
       </div>
@@ -324,28 +361,28 @@
 
     <!-- Call to Action Section -->
     <section class="cta-section py-16 text-center">
-      <h2 class="text-4xl font-playfair font-bold mb-6 fade-in">
-        Join Our Coffee Journey
+      <h2 class="text-4xl font-bold mb-6 fade-in">
+        انضم إلى رحلتنا في عالم القهوة
       </h2>
       <p class="text-lg mb-8 slide-up-fade-in">
-        Visit The Bean Spot and taste the passion in every sip.
+        زر The Bean Spot وتذوق الشغف في كل رشفة.
       </p>
-      <a href="contact.html" class="button-gold fade-in">Find Us</a>
+      <a href="ar_contact.html" class="button-gold fade-in">اعثر علينا</a>
     </section>
 
     <!-- Footer -->
     <footer class="bg-gray-100 py-8 text-center text-gray-600 border-t">
       <p>
-        © 2025 The Bean Spot. Made by
+        © 2025 The Bean Spot. صنع بواسطة
         <a
           href="https://fs-17.github.io"
           class="text-brown-medium hover:text-brown-dark transition duration-300"
           style="
             font-weight: 700;
             color: #d2691e;
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cairo', 'Segoe UI Arabic', sans-serif;
           "
-          >Faisal Alsaweed</a
+          >فيصل السويد</a
         >
       </p>
     </footer>
