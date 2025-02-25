@@ -137,15 +137,15 @@
       </div>
     </section>
 
-    <!-- Add new Video Scroll Section -->
+    <!-- Replace Video Section with Image Sequence -->
     <section class="sticky-video-section">
       <div class="sticky-video-container">
-        <video
+        <img
+          id="sequenceImage"
           class="sticky-video"
-          playsinline
-          muted
-          src="./assets/beans.mp4"
-        ></video>
+          src="./assets/beans/001.webp"
+          alt="Coffee bean sequence"
+        />
         <div class="video-text-overlay" id="videoText">
           <h2>From Bean to Perfection</h2>
           <p>
@@ -358,6 +358,8 @@
     </footer>
 
     <script>
+      preloadbeansimage();
+
       // Mobile Menu Toggle (JS) - Same as before
       const mobileMenuButton = document.getElementById("mobile-menu-button");
       const mobileMenu = document.getElementById("mobile-menu");
@@ -409,30 +411,33 @@
         observer.observe(section);
       });
 
-      // Add Video Scroll Animation
-      const videoSection = document.querySelector(".sticky-video-section");
-      const video = document.querySelector(".sticky-video");
+      // Replace Video Scroll Animation with Image Sequence
+      const imageSection = document.querySelector(".sticky-video-section");
+      const sequenceImage = document.getElementById("sequenceImage");
       const textOverlay = document.getElementById("videoText");
 
-      if (videoSection && video) {
-        let playbackConst = 5;
-
-        // Preload the video
-        video.preload = "auto";
+      if (imageSection && sequenceImage) {
+        const totalFrames = 85; // Total number of frames
 
         window.addEventListener("scroll", () => {
-          const rect = videoSection.getBoundingClientRect();
+          const rect = imageSection.getBoundingClientRect();
           if (rect.top <= 0 && rect.bottom >= window.innerHeight) {
             const scrollPercentage =
               Math.abs(rect.top) / (rect.height - window.innerHeight);
+
+            // Calculate frame number based on scroll percentage
             const frameNumber = Math.min(
-              video.duration * playbackConst,
-              scrollPercentage * video.duration * playbackConst
+              Math.floor(scrollPercentage * totalFrames) + 1,
+              totalFrames
             );
 
-            video.currentTime = frameNumber / playbackConst;
+            // Pad frame number with zeros
+            const paddedFrame = frameNumber.toString().padStart(3, "0");
 
-            // Show text when video is in view
+            // Update image source
+            sequenceImage.src = `./assets/beans/${paddedFrame}.webp`;
+
+            // Show text when sequence is in view
             if (scrollPercentage > 0.2 && scrollPercentage < 0.8) {
               textOverlay.classList.add("visible");
             } else {
@@ -461,6 +466,16 @@
 
         lastScrollTop = scrollTop;
       });
+
+      // Preload images for the image sequence
+      function preloadbeansimage() {
+        const totalFrames = 85;
+        for (let i = 1; i <= totalFrames; i++) {
+          const paddedFrame = i.toString().padStart(3, "0");
+          const img = new Image();
+          img.src = `./assets/beans/${paddedFrame}.webp`;
+        }
+      }
     </script>
   </body>
 </html>
