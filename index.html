@@ -3,7 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bean Spot - Homepage</title>
+    <title>The Bean Spot</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Experience premium coffee at The Bean Spot. We offer artisanal coffee, expertly roasted beans, and a cozy café atmosphere."
+    />
+    <meta
+      name="keywords"
+      content="coffee shop, artisan coffee, specialty coffee, coffee roasters, café, barista, developer portfolio, web development"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://fs-17.github.io/TheBeanSpot/" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:title"
+      content="The Bean Spot - Premium Coffee Shop & Artisan Roasters"
+    />
+    <meta
+      property="og:description"
+      content="Experience premium coffee at The Bean Spot. Artisanal coffee, expertly roasted beans, and cozy café atmosphere."
+    />
+    <meta
+      property="og:image"
+      content="https://fs-17.github.io/TheBeanSpot/assets/og-image.jpg"
+    />
+    <meta property="og:url" content="https://fs-17.github.io/TheBeanSpot/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Bean Spot - Premium Coffee Shop" />
+    <meta
+      name="twitter:description"
+      content="Experience premium coffee at The Bean Spot. Artisanal coffee, expertly roasted beans, and cozy café atmosphere."
+    />
+    <meta
+      name="twitter:image"
+      content="https://thebeanspot.com/assets/og-image.jpg"
+    />
+
+    <!-- Existing stylesheets -->
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -34,7 +76,50 @@
       .wave-path {
         fill: var(--secondary-color);
       }
+      .whitespace {
+        height: 40vh;
+        position: relative;
+        width: 100%;
+
+        /* This is the color of the whitespace */
+        background: linear-gradient(
+          0deg,
+          var(--neutral-light) 0%,
+          var(--neutral-light) 50%,
+          var(--secondary-color) 50%,
+          var(--secondary-color) 100%
+        );
+      }
     </style>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "The Bean Spot",
+        "image": "https://fs-17.github.io/TheBeanSpot/assets/og-image.jpg",
+        "description": "Premium coffee shop offering artisanal coffee and expertly roasted beans in a cozy atmosphere.",
+        "openingHours": "Mo-Su 07:00-22:00",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Main Street",
+          "addressLocality": "KAFD",
+          "addressRegion": "Riyadh",
+          "postalCode": "23432",
+          "addressCountry": "Saudi Arabia"
+        },
+        "priceRange": "$$$",
+        "servesCuisine": "Coffee, Cafe",
+        "acceptsReservations": "false",
+        "menu": "https://fs-17.github.io/TheBeanSpot/menu",
+        "sameAs": [
+          "https://facebook.com/thebeanspot",
+          "https://instagram.com/thebeanspot",
+          "https://twitter.com/thebeanspot"
+        ]
+      }
+    </script>
   </head>
   <body class="bg-cream font-poppins text-brown-dark antialiased">
     <!-- Navbar -->
@@ -194,26 +279,30 @@
     </section>
 
     <!-- Image Text Section 2 - Roasting Artistry (Reverse Layout) -->
-    <section class="image-text-section roasting-section">
-      <div class="image-text-image-container" style="animation-delay: 0.1s">
-        <img
-          src="./assets/flowting.png"
-          alt="Coffee Roasting"
-          style="background: transparent"
-        />
-      </div>
-      <div class="image-text-content">
-        <h2 class="fade-in" style="animation-delay: 0.4s">
-          The Art of Roasting
-        </h2>
-        <p class="slide-up-fade-in" style="animation-delay: 0.6s">
-          Roasting is where science and art intertwine. Our master roasters
-          meticulously control every stage of the process, coaxing out the
-          unique flavor profiles within each bean. We roast in small batches to
-          ensure precision and consistency, unlocking the full potential of
-          every coffee we offer.
-        </p>
-      </div>
+    <section>
+      <section class="image-text-section roasting-section">
+        <div class="image-text-image-container" style="animation-delay: 0.1s">
+          <img
+            src="./assets/flowting.png"
+            alt="Coffee Roasting"
+            style="background: transparent"
+          />
+        </div>
+        <div class="image-text-content">
+          <h2 class="fade-in" style="animation-delay: 0.4s">
+            The Art of Roasting
+          </h2>
+          <p class="slide-up-fade-in" style="animation-delay: 0.6s">
+            Roasting is where science and art intertwine. Our master roasters
+            meticulously control every stage of the process, coaxing out the
+            unique flavor profiles within each bean. We roast in small batches
+            to ensure precision and consistency, unlocking the full potential of
+            every coffee we offer.
+          </p>
+        </div>
+        <div class="whitespace"></div>
+      </section>
+      <!-- whitespace -->
     </section>
 
     <!-- Cafe Ambiance Section -->

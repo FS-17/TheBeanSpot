@@ -3,7 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Bean Spot - الصفحة الرئيسية</title>
+    <title>ذا بين سبوت - مقهى القهوة المتخصص | The Bean Spot</title>
+
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="استمتع بتجربة قهوة متميزة في ذا بين سبوت. نقدم قهوة حرفية، وحبوب محمصة باحتراف، وأجواء مريحة."
+    />
+    <meta
+      name="keywords"
+      content="مقهى، قهوة متخصصة، قهوة عربية، باريستا، مقهى في الرياض، كافد"
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://fs-17.github.io/TheBeanSpot/ar_index.html"
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="ذا بين سبوت - مقهى القهوة المتخصص" />
+    <meta
+      property="og:description"
+      content="اكتشف عالم القهوة الاستثنائية في ذا بين سبوت. قهوة حرفية، وحبوب محمصة باحتراف، وأجواء مريحة."
+    />
+    <meta
+      property="og:image"
+      content="https://fs-17.github.io/TheBeanSpot/assets/ar-og-image.jpg"
+    />
+    <meta
+      property="og:url"
+      content="https://fs-17.github.io/TheBeanSpot/ar_index.html"
+    />
+    <meta property="og:type" content="website" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "The Bean Spot - ذا بين سبوت",
+        "image": "https://fs-17.github.io/TheBeanSpot/assets/storefront.jpg",
+        "description": "مقهى متخصص يقدم قهوة حرفية وحبوب محمصة باحتراف في أجواء مريحة",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "طريق الملك فهد",
+          "addressLocality": "حي كافد",
+          "addressRegion": "الرياض",
+          "addressCountry": "المملكة العربية السعودية"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "24.7415904",
+          "longitude": "46.6364918"
+        },
+        "openingHours": "Mo-Su 07:00-22:00",
+        "priceRange": "$$$",
+        "servesCuisine": ["قهوة", "مقهى"],
+        "inLanguage": "ar"
+      }
+    </script>
+
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
@@ -54,6 +113,20 @@
         font-family: var(--font-arabic) !important;
         font-weight: 600;
       }
+      .whitespace {
+        height: 40vh;
+        position: relative;
+        width: 100%;
+
+        /* This is the color of the whitespace */
+        background: linear-gradient(
+          0deg,
+          var(--neutral-light) 0%,
+          var(--neutral-light) 50%,
+          var(--secondary-color) 50%,
+          var(--secondary-color) 100%
+        );
+      }
     </style>
   </head>
   <body class="bg-cream text-brown-dark antialiased">
@@ -90,7 +163,25 @@
             >English</a
           >
         </div>
-        <!-- Mobile menu button -->
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+          <button id="mobile-menu-button" class="focus:outline-none">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </div>
       <!-- Mobile menu -->
       <div id="mobile-menu" class="hidden md:hidden bg-white shadow-md">
@@ -195,26 +286,29 @@
     </section>
 
     <!-- Image Text Section 2 - Roasting Artistry (Reverse Layout) -->
-    <section class="image-text-section roasting-section">
-      <div
-        class="image-text-image-container"
-        style="animation-delay: 0.1s; left: 0px; right: auto"
-      >
-        <img
-          src="./assets/flowting.png"
-          alt="تحميص القهوة"
-          style="background: transparent"
-        />
-      </div>
-      <div class="image-text-content">
-        <h2 class="fade-in" style="animation-delay: 0.4s">فن التحميص</h2>
-        <p class="slide-up-fade-in" style="animation-delay: 0.6s">
-          التحميص هو حيث يلتقي العلم والفن. يتحكم خبراء التحميص لدينا بدقة في كل
-          مرحلة من مراحل العملية، لاستخراج النكهات الفريدة داخل كل حبة. نقوم
-          بالتحميص بكميات صغيرة لضمان الدقة والاتساق، مما يطلق العنان للإمكانات
-          الكاملة لكل قهوة نقدمها.
-        </p>
-      </div>
+    <section>
+      <section class="image-text-section roasting-section">
+        <div
+          class="image-text-image-container"
+          style="animation-delay: 0.1s; left: 0px; right: auto"
+        >
+          <img
+            src="./assets/flowting.png"
+            alt="تحميص القهوة"
+            style="background: transparent"
+          />
+        </div>
+        <div class="image-text-content">
+          <h2 class="fade-in" style="animation-delay: 0.4s">فن التحميص</h2>
+          <p class="slide-up-fade-in" style="animation-delay: 0.6s">
+            التحميص هو حيث يلتقي العلم والفن. يتحكم خبراء التحميص لدينا بدقة في
+            كل مرحلة من مراحل العملية، لاستخراج النكهات الفريدة داخل كل حبة.
+            نقوم بالتحميص بكميات صغيرة لضمان الدقة والاتساق، مما يطلق العنان
+            للإمكانات الكاملة لكل قهوة نقدمها.
+          </p>
+        </div>
+        <div class="whitespace"></div>
+      </section>
     </section>
 
     <!-- Cafe Ambiance Section -->

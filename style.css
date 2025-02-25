@@ -235,11 +235,7 @@
   color:var(--neutral-dark)
   }
   
-  .cafe-ambiance-section {
-  padding-top:8rem;
-  padding-bottom:8rem;
-  background-color:var(--neutral-light)
-  }
+
   
   .cta-section {
   padding-top:12rem;
@@ -401,27 +397,26 @@
   @media (max-width: 768px) {
   .roasting-section .image-text-image-container {
   right:auto;
-  top:10%;
+  bottom:100%;
   transform:none;
   width:100%;
-  margin-bottom:2rem
+  margin-bottom:2rem;
+  
   }
   
   .roasting-section .image-text-content {
   max-width:100%;
   margin-left:0
   }
-  }
-  
-  @media (max-width: 768px) {
+
   .roasting-section {
   min-height:auto;
-  padding:4rem 0;
+  padding:4rem 0 0rem 0;
   }
   }
   
   .cafe-ambiance-section {
-  padding:8rem 0;
+  padding-bottom: 0rem;
   background-color:var(--neutral-light);
   position:relative
   }
@@ -461,6 +456,13 @@
   .ambiance-gallery {
   grid-template-columns:1.5fr 1fr
   }
+  .whitespace {
+    display: none;
+  }
+  .cafe-ambiance-section {
+    padding-top: 4rem;
+
+    }
   }
   
   .gallery-item {

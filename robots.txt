@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://fs-17.github.io/TheBeanSpot/sitemap.xml
+
+# Block access to specific files and directories
+Disallow: /assets/admin/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
