@@ -1126,6 +1126,7 @@
   
   .hero-title {
   font-family:'Playfair Display',serif;
+  font-style: italic;
   font-size:5.5rem;
   font-weight:700;
   color:#fff;
